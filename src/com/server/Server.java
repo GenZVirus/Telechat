@@ -214,7 +214,7 @@ public class Server implements Runnable {
 	}
 
 	private void process(DatagramPacket packet) {
-		String string = new String(packet.getData());
+		String string = new String(packet.getData(), 0, packet.getLength());
 		if (raw)
 			System.out.println(string);
 		if (string.startsWith("/c/")) {

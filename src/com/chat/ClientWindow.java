@@ -175,7 +175,7 @@ public class ClientWindow extends JFrame implements Runnable{
 	public void send(String message, boolean text) {
 		if (message.equals("")) return;
 		if(text) {
-			message = client.getName() + ": " + message;
+			message = client.getName() + "|" + message;
 			message ="/m/" + message + "/e/";
 			txtMessage.setText("");
 			txtMessage.requestFocusInWindow();
